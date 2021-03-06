@@ -1,0 +1,296 @@
+/*Сброс стилей*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+article>*+* {
+  margin-top: 1em;
+}
+
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+* {
+  font-family: 'Calibri';
+}
+
+body {
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+
+/* Панель навигации */
+
+nav {
+  animation: reveal 1s;
+  position: fixed;
+  display: grid;
+  width: 100%;
+  height: 75px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+ul {
+  margin: 0;
+  padding: 0 40px 0 40px;
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  justify-content: left;
+  grid-gap: 20px;
+  align-content: center;
+}
+
+li {
+  animation: slide 1s;
+  display: inline;
+  text-align: center;
+  list-style: none;
+}
+
+/* Кнопки навигации по сайту */
+nav ul li a {
+  background-image: linear-gradient(to right, #E0C3FC 0%, #8EC5FC 100%);
+  text-decoration: none;
+  font-size: 1.1em;
+  margin: 5px;
+  padding: 10px 5px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  display: block;
+  border: rgba(255, 255, 255, 0.2)
+}
+
+nav ul li a:hover {
+  background-position: center right;
+  color: #fff;
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+/* Стили таблицы */
+.content {
+  padding-top: 86px;
+}
+
+.tb_content {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 2px;
+  width: 80%;
+  margin: 0% 10% 0% 10%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+tr {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  animation: reveal 1s;
+
+}
+
+td {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/* Столбец "Обложка" */
+.tb_cover td {
+  width: 250px;
+  height: 320px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.tb_cover img {
+  border-radius: 15px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Столбец "Название и описание"*/
+td.tb_description {
+  width: 70%;
+  padding: 24px;
+  background: linear-gradient(to left, rgba(34, 193, 195, 0) 0%, rgba(255, 255, 255, 0.25) 100%);
+  transition: 0.5s;
+}
+
+/* Столбец "Наличие" */
+.tb_amount {
+  width: 12%;
+  padding: 24px;
+  text-align: center;
+}
+
+/*Кнопка подробнее в столбце "Наличие"*/
+.tb_amount a {
+  background-image: linear-gradient(to right, #E0C3FC 0%, #8EC5FC 100%);
+  text-decoration: none;
+  font-size: 1.1em;
+  margin: 5px;
+  padding: 10px 16px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  display: block;
+  border: rgba(255, 255, 255, 0.2)
+}
+
+.tb_amount a:hover {
+  background-position: center right;
+  color: #fff;
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+/* Футер сайта */
+
+footer {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 25% 25%;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  grid-gap: 20px;
+  width: 100%;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  color: rgba(31, 31, 31, 0.5);
+}
+
+.linksToPages {
+  display: grid;
+  grid-template-rows: 30px 30px 30px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.linksToPages a {
+  width: 100px;
+  text-decoration: none;
+  color: rgba(31, 31, 31, 0.5);
+  transition: color 0.5s, font-size 0.5s;
+}
+
+.linksToPages a:hover {
+  font-size: 1.1em;
+  color: rgba(31, 31, 31, 1);
+}
+
+@keyframes slide {
+  0% {
+    margin-left: -1600px;
+  }
+
+
+  100% {
+    margin-left: 0px;
+  }
+}
+
+
+@keyframes reveal {
+  0% {
+    opacity: 0
+  }
+
+  50% {
+    opacity: 0.5
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0);
+}
+
+
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
